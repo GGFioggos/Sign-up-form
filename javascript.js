@@ -12,38 +12,54 @@ const phoneError = document.querySelector("#phone-error");
 const passwordError = document.querySelector("#password-error");
 const confirmPasswordError = document.querySelector("#confirm-password-error");
 
-console.log(firstNameError);
+firstName.addEventListener("input", function (event) {
+  if (firstName.value === "") {
+    firstNameError.textContent = "Please type in your first name.";
+  } else {
+    firstNameError.textContent = "";
+  }
+});
 
+lastName.addEventListener("input", function (event) {
+  if (lastName.value === "") {
+    lastNameError.textContent = "Please type in your last name";
+  } else {
+    lastNameError.textContent = "";
+  }
+});
 
-firstName.addEventListener("input", ()=> {
-    if (firstName.value === '') {
-      firstNameError.textContent = 'Please type in your first name.';
-    } else {
-      firstNameError.textContent = '';
+email.addEventListener("input", function (event) {
+  if (email.value === "") {
+    emailError.textContent = "Please enter an email.";
+  } else if (email.validity.typeMismatch) {
+    emailError.textContent = "Please enter a valid Email.";
+  } else {
+    emailError.textContent = "";
+  }
+});
+
+phoneNumber.addEventListener("input", function (event) {
+  if (phoneNumber.value === "") {
+    phoneError.textContent = "Please enter a phone number.";
+  } else {
+    phoneError.textContent = "";
+  }
+});
+
+password.addEventListener("input", function (event) {
+  if (password.value === "") {
+    passwordError.textContent = "Please type in your password";
+  } else {
+    passwordError.textContent = "";
+  }
+});
+
+passwordConfirm.addEventListener("input", function (event) {
+if (password.value != '' && passwordConfirm.value != ''){
+    if (password.value != passwordConfirm.value){
+        confirmPasswordError.textContent = "Passwords do not match";
+    }else{
+        confirmPasswordError.textContent = "";
     }
-  }); 
-
-  lastName.addEventListener("input", function (event) {
-    if (lastName.value === '') {
-      lastNameError.textContent = 'Please type in your last name';
-    } else {
-      lastNameError.textContent = '';
-    }
-  }); 
-
-  email.addEventListener("input", function (event) {
-    if (email.validity.typeMismatch) {
-      emailError.textContent = 'Please enter in a valid Email.';
-    } else {
-      emailError.textContent = '';
-    }
-  }); 
-
-  phoneNumber.addEventListener("input", function (event) {
-    if (phoneNumber.validity.patternMismatch) {
-      phoneError.textContent = 'Please enter in a 10 digit phone number';
-    } else {
-      phoneError.textContent = '';
-    }     
-  }); 
- 
+}
+});
