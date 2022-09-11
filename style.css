@@ -1,0 +1,165 @@
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-family: monospace;
+    font-size: 1.2rem;
+}
+
+html {
+    background-color: rgb(240, 240, 240);
+}
+
+body {
+    font-family: var(--font-family);
+
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+/* LEFT-SIDE */
+
+.left-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    background: url(./images/background-image.jpg);
+    background-size: cover;
+    height: 100;
+    width: 30vw;
+
+}
+
+.logo-bg img {
+    height: 100;
+    width: 5vw;
+    margin: 10px;
+}
+
+.logo-bg {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.555);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-up-text {
+    font-size: 1.8rem;
+    color: white;
+}
+
+/* RIGHT-SIDE */
+
+.right-side {
+    --padding-inline: 60px;
+
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    width: 60vw;
+}
+
+.hero-text {
+    overflow:visible;
+    margin-bottom: 70px;
+    font-size: 1.2rem;
+    padding-inline: var(--padding-inline);
+}
+
+.form-card p {
+    padding-block: 10px;
+    font-size: 1.2rem;
+}
+
+.form-card {
+    padding-inline: var(--padding-inline);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    line-height: 35px;
+    padding-bottom: 30px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
+
+}
+
+
+.form-cell {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 25px;
+  }
+
+label {
+    position: relative;
+    width: 15rem;
+    margin-bottom:2px;
+}
+
+input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(224, 224, 224);
+    font-size: .9rem;
+    margin-top: 3px;
+}
+
+button {
+    font-family: var(--font-family);
+    margin-top: 40px;
+    margin-inline-start: var(--padding-inline);
+    align-self: flex-start;
+    padding-inline: 1.5rem;
+    padding-block: 0.8rem;
+    font-size: 1rem;
+    background-color: rgb(173, 73, 173);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
+}
+
+.login {
+    align-self: flex-start;
+    margin-inline-start: var(--padding-inline);
+    margin-top: 20px;
+
+}
+
+input:focus {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.342);
+    outline: none;
+  }
+
+input:invalid:focus {
+    border: 1px solid red
+}
+
+input:valid:focus {
+    border: 1px solid green;
+}
+
+.error {
+    
+    color: red;
+    position: absolute;
+    top: 66px;
+    font-size: 0.7rem;
+}

@@ -4,9 +4,115 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/odin-lined.png" />
     <title>Sign Up</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="javascript.js"></script>
+    <script src="javascript.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <div class="left-side">
+      <div class="logo-bg">
+        <img src="images/odin-lined.png" />
+        <div class="sign-up-text">SIGN-UP FORM</div>
+      </div>
+    </div>
+    <div class="right-side">
+      <div class="hero-text">
+        This is not a real online service! It's only purpose is to practice my
+        web development skills. Keep in mind that it is not
+        <em>yet</em> optimized for mobile devices so extremely reducing
+        resolution might cause problems. <em>Sign Up now</em> to get started.
+      </div>
+      <div class="form-card">
+        <p>Let's do this!</p>
+        <form id="main-form" method="post" action="/form">
+          <div class="form-cell">
+            <label for="first-name"
+              >FIRST NAME
+              <div id="first-name-error" class="error"></div>
+            </label>
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              maxlength="20"
+              required
+            />
+          </div>
+
+          <div class="form-cell">
+            <label for="last-name"
+              >LAST NAME
+              <div id="last-name-error" class="error"></div>
+            </label>
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              maxlength="20"
+              required
+            />
+          </div>
+
+          <div class="form-cell">
+            <label for="email"
+              >EMAIL
+              <div id="email-error" class="error"></div>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              maxlength="254"
+              required
+            />
+          </div>
+
+          <div class="form-cell">
+            <label for="phone-number"
+              >PHONE NUMBER
+              <div id="phone-error" class="error"></div>
+            </label>
+            <input
+              type="tel"
+              id="phone-number"
+              name="phone-number"
+              maxlength="15"
+              required
+            />
+          </div>
+
+          <div class="form-cell">
+            <label for="password"
+              >PASSWORD
+              <div id="password-error" class="error"></div>
+            </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              maxlength="20"
+              required
+            />
+          </div>
+
+          <div class="form-cell">
+            <label for="confirm-password"
+              >CONFIRM PASSWORD
+              <div id="confirm-password-error" class="error"></div>
+            </label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm-password"
+              maxlength="20"
+              required
+            />
+          </div>
+        </form>
+      </div>
+      <button type="submit" form="main-form">Create Account</button>
+      <p class="login">Already have an account? <a href="">Log in</a></p>
+    </div>
+  </body>
 </html>
