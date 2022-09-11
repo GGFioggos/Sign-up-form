@@ -4,6 +4,7 @@ const email = document.querySelector("#email");
 const phoneNumber = document.querySelector("#phone-number");
 const password = document.querySelector("#password");
 const passwordConfirm = document.querySelector("#confirm-password");
+const submitButton = document.querySelector("#submitbtn");
 
 const firstNameError = document.querySelector("#first-name-error");
 const lastNameError = document.querySelector("#last-name-error");
@@ -11,6 +12,7 @@ const emailError = document.querySelector("#email-error");
 const phoneError = document.querySelector("#phone-error");
 const passwordError = document.querySelector("#password-error");
 const confirmPasswordError = document.querySelector("#confirm-password-error");
+
 
 firstName.addEventListener("input", function (event) {
   if (firstName.value === "") {
@@ -58,8 +60,13 @@ passwordConfirm.addEventListener("input", function (event) {
 if (password.value != '' && passwordConfirm.value != ''){
     if (password.value != passwordConfirm.value){
         confirmPasswordError.textContent = "Passwords do not match";
+        passwordConfirm.setCustomValidity("Invalid field.");
+        submitButton.disabled = true;
     }else{
         confirmPasswordError.textContent = "";
+        submitButton.disabled = false;
+        passwordConfirm.setCustomValidity("");
+
     }
 }
 });

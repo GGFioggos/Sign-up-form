@@ -61,8 +61,13 @@ body {
 
 .right-side {
     --padding-inline: 60px;
+    --text-shadow: 1px 3px 5px rgba(0,0,0,0.35);
 
-    background-color: rgb(240, 240, 240);
+    color: white;
+
+    text-shadow: var(--text-shadow);
+    background: rgb(17,53,64);
+    background: linear-gradient(142deg, rgba(17,53,64,1) 0%, rgba(3,27,29,1) 99%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,6 +76,7 @@ body {
 }
 
 .hero-text {
+    text-shadow: var(--text-shadow);
     overflow:visible;
     margin-bottom: 70px;
     font-size: 1.2rem;
@@ -78,6 +84,7 @@ body {
 }
 
 .form-card p {
+    text-shadow: var(--text-shadow);
     padding-block: 10px;
     font-size: 1.2rem;
 }
@@ -87,10 +94,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.273);
     line-height: 35px;
     padding-bottom: 30px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
+    box-shadow: 0px 5px 8px 2px rgba(0, 0, 0, 0.212);
 
 }
 
@@ -101,23 +108,27 @@ body {
 }
 
 form {
+    text-shadow: var(--text-shadow);
     display: flex;
     flex-flow: row wrap;
     gap: 25px;
   }
 
 label {
+    
     position: relative;
     width: 15rem;
     margin-bottom:2px;
 }
 
 input {
+    color: white;
+    background: #3a3939c5;
     padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid rgb(224, 224, 224);
     font-size: .9rem;
-    margin-top: 3px;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: transparent;
 }
 
 button {
@@ -128,7 +139,7 @@ button {
     padding-inline: 1.5rem;
     padding-block: 0.8rem;
     font-size: 1rem;
-    background-color: rgb(173, 73, 173);
+    background-color: rgba(193, 19, 19, 0.708);
     border: none;
     border-radius: 10px;
     color: white;
@@ -157,9 +168,12 @@ input:valid:focus {
 }
 
 .error {
-    
     color: red;
     position: absolute;
     top: 66px;
     font-size: 0.7rem;
+}
+
+a,a:visited {
+    color: rgba(193, 19, 19, 0.708);
 }
